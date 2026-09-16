@@ -341,3 +341,416 @@ footer.site-footer {
 .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
 .footer-links a { font-size: 0.88rem; color: var(--ink-muted); }
 .footer-links a:hover { color: var(--accent); }
+/* ================= DICTIONARY PAGE ================= */
+
+/* =====================================================
+   GLOSSARY PAGE
+   ===================================================== */
+
+.dictionary-page {
+    min-height: 100vh;
+}
+
+
+/* HERO */
+
+.dictionary-page .hero {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+
+.dictionary-page .eyebrow {
+    color: #f5b72f;
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+
+.dictionary-page .hero h1 {
+    color: #f5f3e8;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    font-weight: 700;
+}
+
+
+.dictionary-page .lead {
+    color: #aeb4d9;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    max-width: 800px;
+}
+
+
+/* SEARCH */
+
+.dictionary-page #searchInput {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px 22px;
+
+    margin-bottom: 40px;
+
+    background: #171a35;
+
+    border: 1px solid #30345c;
+
+    border-radius: 12px;
+
+    color: #f5f3e8;
+
+    font-size: 18px;
+
+    outline: none;
+}
+
+
+.dictionary-page #searchInput::placeholder {
+    color: #8f95bd;
+}
+
+
+.dictionary-page #searchInput:focus {
+    border-color: #4b5180;
+}
+
+
+/* CARDS */
+
+.dictionary-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+.dictionary-card {
+
+    background: #171a35;
+
+    border: 1px solid #30345c;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.dictionary-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #4b5180;
+}
+
+
+/* TERM */
+
+.dictionary-card h2 {
+
+    color: #f5f3e8 !important;
+
+    font-size: 30px;
+
+    margin: 0 0 10px;
+}
+
+
+/* FULL FORM */
+
+.dictionary-card h3 {
+
+    color: #f5b72f !important;
+
+    font-size: 16px;
+
+    margin: 0 0 18px;
+
+    font-family: "IBM Plex Mono", monospace;
+}
+
+
+/* MEANING */
+
+.dictionary-card p {
+
+    color: #aeb4d9 !important;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .dictionary-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .dictionary-page .hero h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .dictionary-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dictionary-card {
+
+        padding: 25px;
+
+    }
+
+}
+/* =====================================================
+   GLOSSARY LAYOUT FIX
+   ===================================================== */
+
+.dictionary-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.dictionary-page .container {
+    width: min(1200px, calc(100% - 80px));
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+/* HERO */
+
+.dictionary-page .hero {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+
+/* SEARCH */
+
+.dictionary-page #searchInput {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* CARDS */
+
+.dictionary-grid {
+    width: 100%;
+    max-width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* CARD */
+
+.dictionary-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    padding: 32px;
+
+    background: #171a35;
+
+    border: 1px solid #30345c;
+
+    border-radius: 18px;
+}
+
+
+/* TEXT */
+
+.dictionary-card h2,
+.dictionary-card h3,
+.dictionary-card p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .dictionary-page .container {
+        width: calc(100% - 40px);
+    }
+
+    .dictionary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .dictionary-page .container {
+        width: calc(100% - 30px);
+    }
+
+    .dictionary-page .hero {
+        padding-top: 50px;
+    }
+
+    .dictionary-page .hero h1 {
+        font-size: 42px;
+    }
+
+    .dictionary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dictionary-card {
+        padding: 24px;
+    }
+
+}
+/* ================= HEADER FIX FOR GLOSSARY ================= */
+
+.site-header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.site-header .nav-wrap {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.site-header .brand {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.site-header .orbit-mark {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: block;
+}
+
+.site-header .main-nav {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    white-space: nowrap;
+}
+
+
+/* Desktop */
+
+@media (max-width: 1200px) {
+
+    .site-header .nav-wrap {
+        padding: 0 25px;
+    }
+
+    .site-header .main-nav {
+        gap: 20px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .site-header .nav-wrap {
+        padding: 0 20px;
+    }
+
+    .site-header .main-nav {
+        overflow-x: auto;
+        margin-left: 30px;
+    }
+
+}
