@@ -96,7 +96,7 @@ p { margin: 0 0 1em; color: var(--ink-muted); }
 .orbit-divider {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   margin: 64px 0 32px;
   color: var(--ink-dim);
   font-family: var(--font-mono);
