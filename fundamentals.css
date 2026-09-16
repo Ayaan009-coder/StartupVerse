@@ -172,12 +172,12 @@ strong {
 .main-nav a:hover,
 .main-nav a.active {
   color: var(--text-primary);
-  /* background: var(--bg-card); */
+  background: var(--bg-card);
 }
 
 .main-nav a.active {
-  border: 1px solid var(--border-focus);
-  color: var(--accent-yellow);
+  border: none;
+  color: var(--text-primary);
 }
 
 .nav-toggle {
