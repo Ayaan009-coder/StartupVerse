@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Fundamentals — StartupVerse</title>
+<meta name="description" content="Startup marketing fundamentals, CAC vs LTV, aur Zomato & Blinkit ki real failure-to-success case studies — compact aur simple Hinglish mein.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <svg class="orbit-mark" viewBox="0 0 34 34"><circle class="ring" cx="17" cy="17" r="15"/><circle class="ring" cx="17" cy="17" r="9"/><circle class="core" cx="17" cy="17" r="3"/><circle class="dot" cx="17" cy="2" r="2"/></svg>
+      Startup<span class="verse">Verse</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu kholo">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="fundamentals.html" class="active">Market Fundamentals</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="success-stories.html">Success Stories</a></li>
+        <li><a href="podcasts.html">Podcasts</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" style="padding-top:56px;">
+  <span class="eyebrow">Marketing & Growth</span>
+  <h1 style="font-size:clamp(2rem,4vw,2.8rem); margin-top:10px;">Market & Marketing Fundamentals</h1>
+  <p class="lead" style="max-width:68ch; font-size:1.05rem;">Marketing sirf ads chalana nahi hai — customer psychology, positive unit economics (CAC vs LTV), aur Zomato & Blinkit ke real failures se seekhna hai.</p>
+
+  <!-- 4 Core Marketing Rules (Matching Skills.html Card Style) -->
+  <div class="grid grid-2" style="margin-top:40px;">
+
+    <div class="card skill-card">
+      <span class="tag green">Foundation</span>
+      <h3>1. Product-Market Fit (PMF) First</h3>
+      <p>Agar product bekaar hai, toh marketing sirf ek <em>leaky bucket</em> mein paani bharna hai. Pehle 100 loyal users banao jo bole ki "yeh product band hua toh meri life ruk jayegi", uske baad hi marketing scale karo.</p>
+      <div class="skill-meter"><span style="width:95%"></span></div>
+    </div>
+
+    <div class="card skill-card">
+      <span class="tag">Economics</span>
+      <h3>2. CAC vs LTV Rule (3x Benchmark)</h3>
+      <p><strong>CAC</strong> = Naya user laane ka kharcha. <strong>LTV</strong> = Woh user lifetime kitna profit dega. Sustainable startup ke liye LTV hamesha <strong>3x se 5x CAC</strong> hona chahiye. 1x se kam hua toh bankruptcy pakki hai.</p>
+      <div class="skill-meter"><span style="width:90%"></span></div>
+    </div>
+
+    <div class="card skill-card">
+      <span class="tag red">Psychology</span>
+      <h3>3. Moment Marketing & Relatable Tone</h3>
+      <p>Generic ads koi nahi dekhta. Zomato ne sikhaya: customer ke current moment par target karo (IPL match thriller, barsaat ke pakode, late night 1 AM breakup craving). Corporate jargon hata ke dost ki tarah baat karo.</p>
+      <div class="skill-meter"><span style="width:85%"></span></div>
+    </div>
+
+    <div class="card skill-card">
+      <span class="tag blue">Distribution</span>
+      <h3>4. Speed As Marketing USP</h3>
+      <p>Blinkit ne prove kiya ki distribution aur speed hi sabse badi marketing hai. 10-minute delivery ne itna crazy word-of-mouth generate kiya ki unhe customer acquire karne ke liye discounts ki zaroorat nahi padi.</p>
+      <div class="skill-meter"><span style="width:80%"></span></div>
+    </div>
+
+  </div>
+
+  <!-- Compact Interactive CAC / LTV Calculator -->
+  <div class="calc-card" style="margin:48px 0;">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px;">
+      <div>
+        <span class="tag green">Interactive Tool</span>
+        <h3 style="font-size:1.35rem; margin-top:6px;">Quick CAC & LTV Health Check</h3>
+      </div>
+      <div id="outBadge" class="result-badge healthy">Healthy Ratio (3x - 5x)</div>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-inputs">
+        <div class="form-group">
+          <label for="calcAdSpend">Monthly Marketing Budget: <span style="color:var(--accent-yellow);">₹</span></label>
+          <input type="number" id="calcAdSpend" class="calc-input" value="50000" step="5000">
+        </div>
+        <div class="form-group">
+          <label for="calcNewCustomers">Naye Customers per Month:</label>
+          <input type="number" id="calcNewCustomers" class="calc-input" value="100" step="10">
+        </div>
+        <div class="form-group">
+          <label for="calcAOV">Average Order Value (AOV):</label>
+          <input type="number" id="calcAOV" class="calc-input" value="450" step="50">
+        </div>
+      </div>
+
+      <div class="calc-inputs">
+        <div class="form-group">
+          <label for="calcOrdersPerYear">Orders Per User (Annual):</label>
+          <input type="number" id="calcOrdersPerYear" class="calc-input" value="8" step="1">
+        </div>
+        <div class="form-group">
+          <label for="calcMargin">Profit Margin (%):</label>
+          <input type="number" id="calcMargin" class="calc-input" value="25" step="5" max="100">
+        </div>
+
+        <div class="calc-results-panel" style="padding:16px; margin-top:2px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-size:0.85rem; color:var(--text-muted);">CAC:</span>
+            <strong id="outCAC" style="color:var(--accent-yellow);">₹500</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <span style="font-size:0.85rem; color:var(--text-muted);">2-Yr LTV:</span>
+            <strong id="outLTV" style="color:var(--accent-green);">₹1,800</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; border-top:1px solid var(--border); padding-top:8px;">
+            <span style="font-size:0.88rem; font-weight:600;">LTV:CAC Ratio:</span>
+            <strong id="outRatio" style="font-size:1.15rem; color:var(--text-primary);">3.60x</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p id="outAdvice" style="font-size:0.85rem; color:var(--text-muted); margin-top:14px; text-align:center;">Shaandar! Har ₹1 marketing spend par ₹3-₹5 ka return mil raha hai. Growth capital invest karne ka bilkul sahi samay hai.</p>
+  </div>
+
+  <!-- Real Startup Playbooks: Zomato, Blinkit, Swiggy, Amazon, Flipkart, Zepto -->
+  <div class="orbit-divider">Real Startup Playbooks: Origins, Falls & Comebacks</div>
+
+  <div class="section-head">
+    <h2>Zomato, Blinkit, Swiggy, Amazon & Others</h2>
+    <p>Har bade startup ki kahani mein ek fatal crisis aati hai jahan 99% log haar maan lete hain. Samjho in top startups ne kaise start kiya, kahan gire, aur marketing & pivots se kaise wapsi ki.</p>
+  </div>
+
+  <div class="grid grid-3" style="margin-bottom:48px;">
+
+    <!-- 1. Zomato -->
+    <div class="card" style="padding:22px; border-top:3px solid var(--accent-red);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="tag red">Food Tech</span>
+        <span style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono);">Deepinder Goyal</span>
+      </div>
+      <h3 style="margin:4px 0 12px; font-size:1.2rem;">Zomato</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; line-height:1.5;">
+        <div>
+          <strong style="color:var(--accent-yellow);">🚀 Shuruat (2008 Foodiebay):</strong>
+          <p style="margin-top:2px;">Bain office cafeteria ke lunch menus scan karke PDF banaye. Zero ad spend — pure Google SEO se India ka #1 food directory bane.</p>
+        </div>
+        <div>
+          <strong style="color:var(--accent-green);">💡 Marketing Hack:</strong>
+          <p style="margin-top:2px;">Witty red billboards + relatable moment push notifications (IPL, baarish ke pakode, late night cravings) jo Twitter par viral hue.</p>
+        </div>
+        <div>
+          <strong style="color:#FF7B84;">⚠️ The Fall / Crisis:</strong>
+          <p style="margin-top:2px;"><strong>2019 #Logout:</strong> Zomato Gold ke 1+1 discount se 2,500+ restaurants ne boycott kar diya. International expansion (US Urbanspoon $52M) mein millions cash burn hua.</p>
+        </div>
+        <div>
+          <strong style="color:var(--text-primary);">🏆 Comeback:</strong>
+          <p style="margin-top:2px;">₹6 platform fee discipline, Hyperpure B2B network, Blinkit acquisition aur profitable IPO turnaround.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Blinkit -->
+    <div class="card" style="padding:22px; border-top:3px solid var(--accent-blinkit);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="tag yellow">Quick Commerce</span>
+        <span style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono);">Albinder Dhindsa</span>
+      </div>
+      <h3 style="margin:4px 0 12px; font-size:1.2rem;">Blinkit (Grofers)</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; line-height:1.5;">
+        <div>
+          <strong style="color:var(--accent-yellow);">🚀 Shuruat (2013 Grofers):</strong>
+          <p style="margin-top:2px;">Local kirana shops se 90-minute scheduled grocery delivery model. Margins sirf 2-4% the aur delivery boy cost high thi.</p>
+        </div>
+        <div>
+          <strong style="color:var(--accent-green);">💡 Marketing Hack:</strong>
+          <p style="margin-top:2px;">Speed as marketing (10-min delivery) + viral <em>"Doodh mangoge, doodh denge"</em> billboard war jisne nationwide organic PR banaya.</p>
+        </div>
+        <div>
+          <strong style="color:#FF7B84;">⚠️ The Fall / Crisis:</strong>
+          <p style="margin-top:2px;"><strong>Jan 2016 Shutdown:</strong> Cash crunch ke chalte ek din mein 9 cities mein operations band ki. Scheduled warehouses par massive cash burn hua.</p>
+        </div>
+        <div>
+          <strong style="color:var(--text-primary);">🏆 Comeback:</strong>
+          <p style="margin-top:2px;">Warehouses band karke 2km micro dark-stores banaye. Zomato ne acquire kiya; aaj ₹1,200+ Cr monthly GOV dominate kar raha hai.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Swiggy -->
+    <div class="card" style="padding:22px; border-top:3px solid #FC8019;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="tag orange">Convenience</span>
+        <span style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono);">Sriharsha Majety</span>
+      </div>
+      <h3 style="margin:4px 0 12px; font-size:1.2rem;">Swiggy</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; line-height:1.5;">
+        <div>
+          <strong style="color:var(--accent-yellow);">🚀 Shuruat (2014):</strong>
+          <p style="margin-top:2px;">First logistics startup Bundl fail hone ke baad Bengaluru ke Koramangala mein sirf 6 delivery boys aur 25 restaurants se shuru kiya.</p>
+        </div>
+        <div>
+          <strong style="color:var(--accent-green);">💡 Marketing Hack:</strong>
+          <p style="margin-top:2px;"><em>"Swiggy karo, phir jo chahe karo"</em> campaign + live GPS delivery tracking jisne customer ki hunger anxiety khatam kar di.</p>
+        </div>
+        <div>
+          <strong style="color:#FF7B84;">⚠️ The Fall / Crisis:</strong>
+          <p style="margin-top:2px;">Zomato ke saath discount war mein monthly $40M+ burn; Supr Daily aur Swiggy Stores fail hue; COVID mein 1,000+ staff layoffs.</p>
+        </div>
+        <div>
+          <strong style="color:var(--text-primary);">🏆 Comeback:</strong>
+          <p style="margin-top:2px;">Instamart quick-commerce launch, Dineout acquisition, unit economics improvement aur massive blockbuster IPO listing.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Amazon -->
+    <div class="card" style="padding:22px; border-top:3px solid #FF9900;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="tag">Global E-Com</span>
+        <span style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono);">Jeff Bezos</span>
+      </div>
+      <h3 style="margin:4px 0 12px; font-size:1.2rem;">Amazon</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; line-height:1.5;">
+        <div>
+          <strong style="color:var(--accent-yellow);">🚀 Shuruat (1994):</strong>
+          <p style="margin-top:2px;">Garage mein purane wooden doors ko table banakar books online bechna shuru kiya. Bell bajti thi har order par!</p>
+        </div>
+        <div>
+          <strong style="color:var(--accent-green);">💡 Marketing Hack:</strong>
+          <p style="margin-top:2px;"><strong>Amazon Prime Loyalty Flywheel:</strong> Free fast delivery ka subscription lene ke baad users ne competitors se shopping karna band kar diya (4x spend).</p>
+        </div>
+        <div>
+          <strong style="color:#FF7B84;">⚠️ The Fall / Crisis:</strong>
+          <p style="margin-top:2px;">2000 dot-com bubble mein stock 90% crash; 2014 mein <strong>Fire Phone</strong> disaster mein $170 Million ka direct write-off hua.</p>
+        </div>
+        <div>
+          <strong style="color:var(--text-primary);">🏆 Comeback:</strong>
+          <p style="margin-top:2px;">AWS Cloud banaya jo huge profits deta hai, Marketplace khola, aur world ka sabse trusted everything-store ban gaya.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Flipkart -->
+    <div class="card" style="padding:22px; border-top:3px solid var(--accent-blue);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="tag blue">Indian E-Com</span>
+        <span style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono);">Sachin & Binny Bansal</span>
+      </div>
+      <h3 style="margin:4px 0 12px; font-size:1.2rem;">Flipkart</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; line-height:1.5;">
+        <div>
+          <strong style="color:var(--accent-yellow);">🚀 Shuruat (2007):</strong>
+          <p style="margin-top:2px;">Two ex-Amazon engineers ne 2 BHK flat se shuru kiya. Khud scooter par jaakar customer ko books hand-deliver karte the.</p>
+        </div>
+        <div>
+          <strong style="color:var(--accent-green);">💡 Marketing Hack:</strong>
+          <p style="margin-top:2px;"><strong>Cash on Delivery (COD):</strong> Indian customers credit card se darte the; COD ne online shopping ka trust barrier hamesha ke liye tod diya.</p>
+        </div>
+        <div>
+          <strong style="color:#FF7B84;">⚠️ The Fall / Crisis:</strong>
+          <p style="margin-top:2px;"><strong>2015 App-Only Disaster:</strong> Website band karke sirf app rakhne ki koshish ki, 35% traffic drop hua aur Amazon ne market share cheen liya.</p>
+        </div>
+        <div>
+          <strong style="color:var(--text-primary);">🏆 Comeback:</strong>
+          <p style="margin-top:2px;">Website wapas laaye, Big Billion Day mega festive event banaya, PhonePe banaya, aur Walmart ne $16 Billion mein acquire kiya.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Zepto -->
+    <div class="card" style="padding:22px; border-top:3px solid var(--accent-purple);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="tag purple">Speed Commerce</span>
+        <span style="font-size:0.75rem; color:var(--text-dim); font-family:var(--font-mono);">Aadit & Kaivalya</span>
+      </div>
+      <h3 style="margin:4px 0 12px; font-size:1.2rem;">Zepto</h3>
+      <div style="display:flex; flex-direction:column; gap:10px; font-size:0.86rem; line-height:1.5;">
+        <div>
+          <strong style="color:var(--accent-yellow);">🚀 Shuruat (2021):</strong>
+          <p style="margin-top:2px;">19-year-old Stanford dropouts ne KiranaKart fail hone ke baad COVID lockdown ke dauran 10-minute grocery delivery start ki.</p>
+        </div>
+        <div>
+          <strong style="color:var(--accent-green);">💡 Marketing Hack:</strong>
+          <p style="margin-top:2px;">Hyper-dense dark store mapping (har 1.5km par store) aur catchy visual ads jo "delay" ko criminal portray karte hain.</p>
+        </div>
+        <div>
+          <strong style="color:#FF7B84;">⚠️ The Fall / Crisis:</strong>
+          <p style="margin-top:2px;">2022-23 Funding Winter mein huge monthly cash burn; skeptics ne bola quick commerce discounts khatam hote hi mar jayega.</p>
+        </div>
+        <div>
+          <strong style="color:var(--text-primary);">🏆 Comeback:</strong>
+          <p style="margin-top:2px;">High-margin Zepto Cafe (snacks, tea) launch kiya, advertising revenue monetize kiya aur $5 Billion valuation cross ki.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Interactive Moment Marketing Push & Billboard Preview -->
+  <div class="grid grid-2" style="align-items:center; margin-bottom:48px;">
+    <div class="card" style="padding:24px;">
+      <span class="tag red">Moment Marketing</span>
+      <h3 style="margin:10px 0 6px;">Zomato & Blinkit Notification Hack</h3>
+      <p style="font-size:0.88rem; margin-bottom:14px;">Buttons click karke dekho context ke hisab se notification kaise badalti hai:</p>
+
+      <div class="channel-filters" style="margin-bottom:14px;">
+        <button class="filter-chip active" data-scenario="ipl">🏏 IPL</button>
+        <button class="filter-chip" data-scenario="rain">🌧️ Baarish</button>
+        <button class="filter-chip" data-scenario="midnight">🍕 1:30 AM</button>
+        <button class="filter-chip" data-scenario="diwali">✨ Festive</button>
+      </div>
+
+      <div class="phone-mockup" style="max-width:100%; padding:14px;">
+        <div id="activePushCard" class="push-card" style="margin:0;">
+          <div class="push-header">
+            <div class="push-app">
+              <span id="notifAppIcon" class="app-icon zomato">Z</span>
+              <span id="notifAppName">Zomato</span>
+            </div>
+            <span id="notifTime" class="push-time">8:45 PM • 19th Over</span>
+          </div>
+          <div id="notifTitle" class="push-title">Match fas chuka hai! 🏏</div>
+          <div id="notifBody" class="push-body">Nails chabane se pet nahi bharega. Chole Bhature order kar lo, tension automatic kam ho jayegi! Flat ₹120 OFF.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Viral Billboard Mockup -->
+    <div class="card" style="padding:24px; text-align:center;">
+      <span class="tag">The Famous Billboard War</span>
+      <h3 style="margin:10px 0 6px;">"Doodh vs Kheer" OOH Campaign</h3>
+      <p style="font-size:0.88rem; margin-bottom:14px;">Sunny Deol ke classic dialogue ko twist karke dono brands ne bina TV ads ke 50M+ free social impressions banaye:</p>
+
+      <div class="billboard-container" style="margin:10px 0;">
+        <div class="billboard-box blinkit-bb" style="padding:18px 12px; min-height:110px;">
+          <div class="billboard-text" style="font-size:1.15rem;">Doodh mangoge,<br>doodh denge!</div>
+          <div class="billboard-tagline" style="font-size:0.75rem;">Blinkit • 10 Mins</div>
+        </div>
+        <div class="billboard-box zomato-bb" style="padding:18px 12px; min-height:110px;">
+          <div class="billboard-text" style="font-size:1.15rem;">Kheer mangoge,<br>kheer denge!</div>
+          <div class="billboard-tagline" style="font-size:0.75rem;">Zomato • Delivery</div>
+        </div>
+      </div>
+      <p style="font-size:0.8rem; color:var(--text-dim); margin-top:8px;">Netflix, Durex, Jeevansathi ne copy banayi aur poore internet par trend ho gaya.</p>
+    </div>
+  </div>
+
+  <!-- Orbit Divider: 3 Key Founder Takeaways (Matching Skills Page Layout) -->
+  <div class="orbit-divider">Founder Ke Liye 3 Golden Rules</div>
+
+  <div class="grid grid-3" style="margin-bottom:60px;">
+    <div class="card">
+      <span class="tag green">Rule 1</span>
+      <h3>PMF se pehle burn mat karo</h3>
+      <p>Paid ads se customer khareedna aasaan hai, par agar product mein dum nahi toh chhod kar chale jayenge.</p>
+    </div>
+    <div class="card">
+      <span class="tag red">Rule 2</span>
+      <h3>Partners ko mat sataao</h3>
+      <p>Zomato Gold ke #Logout boycott ne sikhaya: Supply-side (restaurants/vendors) khush nahi toh platform collapse ho jayega.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Rule 3</span>
+      <h3>Speed hi marketing hai</h3>
+      <p>Blinkit ki 10-min delivery ne dikhaya: Customer ka time bachana sabse powerful word-of-mouth marketing weapon hai.</p>
+    </div>
+  </div>
+
+  <!-- Navigation CTA -->
+  <div class="cta-row" style="margin-bottom:80px; justify-content:center;">
+    <a href="roadmap.html" class="btn btn-primary">Ab Startup Roadmap Samjho →</a>
+    <a href="skills.html" class="btn btn-ghost">Skills Self-Check Karo</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p class="footer-note">StartupVerse ek learning resource hai — investment ya legal advice nahi.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="skills.html">Skills</a>
+      <a href="fundamentals.html">Market Fundamentals</a>
+      <a href="glossary.html">Glossary</a>
+    </div>
+  </div>
+</footer>
+
+<script src="javascript.js"></script>
+</body>
+</html>
