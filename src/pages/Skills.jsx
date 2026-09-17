@@ -1,3 +1,6 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 const skills = [
   {
     title: "Problem Solving",
@@ -35,30 +38,46 @@ const skills = [
 
 function Skills() {
   return (
-    <section className="page-section">
+    <>
+      <Navbar />
 
-      <div className="page-header">
-        <p className="eyebrow">FOUNDERS</p>
-        <h1>Skills You Need</h1>
-        <p>
-          You don't need to know everything on day one. Start learning the
-          skills that matter most.
-        </p>
-      </div>
+      <main>
+        <section className="page-section">
 
-      <div className="cards-grid">
+          <div className="page-header">
+            <p className="eyebrow">FOUNDERS</p>
 
-        {skills.map((skill, index) => (
-          <div className="info-card" key={index}>
-            <span>0{index + 1}</span>
-            <h3>{skill.title}</h3>
-            <p>{skill.text}</p>
+            <h1>Skills You Need</h1>
+
+            <p>
+              You don't need to know everything on day one. Start learning the
+              skills that matter most.
+            </p>
           </div>
-        ))}
 
-      </div>
+          <div className="cards-grid">
 
-    </section>
+            {skills.map((skill, index) => (
+              <div className="info-card" key={index}>
+
+                <span>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <h3>{skill.title}</h3>
+
+                <p>{skill.text}</p>
+
+              </div>
+            ))}
+
+          </div>
+
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }
 

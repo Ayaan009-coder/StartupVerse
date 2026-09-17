@@ -1,5 +1,7 @@
-
 import { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "./dictionary.css";
 
 function Dictionary() {
   const [search, setSearch] = useState("");
@@ -9,7 +11,7 @@ function Dictionary() {
       term: "MVP",
       fullForm: "Minimum Viable Product",
       meaning:
-        "A basic version of a product with enough features to test the idea with real users."
+        "A basic version of a product that is launched to test an idea with real users."
     },
     {
       term: "B2B",
@@ -21,13 +23,13 @@ function Dictionary() {
       term: "B2C",
       fullForm: "Business to Consumer",
       meaning:
-        "A business model where a company directly sells products or services to customers."
+        "A business model where a company sells products or services directly to customers."
     },
     {
       term: "D2C",
       fullForm: "Direct to Consumer",
       meaning:
-        "A company sells its products directly to customers without relying on traditional retailers."
+        "A company sells directly to customers without relying on traditional middlemen."
     },
     {
       term: "CAC",
@@ -51,19 +53,19 @@ function Dictionary() {
       term: "ARR",
       fullForm: "Annual Recurring Revenue",
       meaning:
-        "The recurring revenue a company expects to generate from customers over one year."
+        "The recurring revenue a company expects to generate over one year."
     },
     {
       term: "MRR",
       fullForm: "Monthly Recurring Revenue",
       meaning:
-        "The predictable revenue a company expects to generate from customers every month."
+        "The predictable recurring revenue a company generates every month."
     },
     {
       term: "ROI",
       fullForm: "Return on Investment",
       meaning:
-        "A measure used to understand how much return is generated from an investment."
+        "A measure used to understand the return generated from an investment."
     },
     {
       term: "Burn Rate",
@@ -75,31 +77,31 @@ function Dictionary() {
       term: "Runway",
       fullForm: "Startup Cash Runway",
       meaning:
-        "The amount of time a startup can continue operating before it runs out of cash."
+        "The amount of time a startup can continue operating before its cash runs out."
     },
     {
       term: "Unicorn",
       fullForm: "Startup Valued at $1 Billion+",
       meaning:
-        "A privately held startup that reaches a valuation of at least one billion dollars."
+        "A privately held startup valued at one billion US dollars or more."
     },
     {
       term: "Decacorn",
       fullForm: "Startup Valued at $10 Billion+",
       meaning:
-        "A privately held startup that reaches a valuation of at least ten billion dollars."
+        "A privately held startup valued at ten billion US dollars or more."
     },
     {
       term: "Pivot",
       fullForm: "Business Model Change",
       meaning:
-        "A significant change in a startup's product, strategy or business model."
+        "A significant change in a startup's product, market or business strategy."
     },
     {
       term: "USP",
       fullForm: "Unique Selling Proposition",
       meaning:
-        "The unique benefit or feature that makes a product different from its competitors."
+        "The unique benefit or feature that makes a product different from competitors."
     },
     {
       term: "KPI",
@@ -111,7 +113,7 @@ function Dictionary() {
       term: "SaaS",
       fullForm: "Software as a Service",
       meaning:
-        "A software business model where users access software online, usually through a subscription."
+        "A software business model where users access software through the internet, often by subscription."
     },
     {
       term: "API",
@@ -123,13 +125,13 @@ function Dictionary() {
       term: "Seed Funding",
       fullForm: "Early-Stage Funding",
       meaning:
-        "Investment provided to a startup during its early stages to help develop and grow the business."
+        "Investment provided to a startup during its early stages of development."
     },
     {
       term: "Bootstrapping",
       fullForm: "Self-Funded Startup",
       meaning:
-        "Building and growing a startup using the founder's own money and business revenue instead of external investment."
+        "Building and growing a startup using the founders' own money or business revenue."
     },
     {
       term: "Angel Investor",
@@ -147,7 +149,7 @@ function Dictionary() {
       term: "Valuation",
       fullForm: "Business Valuation",
       meaning:
-        "The estimated monetary value of a company."
+        "The estimated monetary value of a company or startup."
     },
     {
       term: "Equity",
@@ -159,7 +161,7 @@ function Dictionary() {
       term: "Stake",
       fullForm: "Ownership Stake",
       meaning:
-        "The portion or percentage of a company owned by an individual or organization."
+        "The portion or percentage of ownership someone has in a company."
     },
     {
       term: "Revenue",
@@ -171,43 +173,43 @@ function Dictionary() {
       term: "Profit",
       fullForm: "Net Profit",
       meaning:
-        "The money remaining after a business subtracts its expenses from its revenue."
+        "The money remaining after subtracting expenses from revenue."
     },
     {
       term: "Churn Rate",
       fullForm: "Customer Churn Rate",
       meaning:
-        "The percentage of customers who stop using or paying for a product or service during a period."
+        "The percentage of customers who stop using a product or service during a given period."
     },
     {
       term: "Conversion Rate",
       fullForm: "Conversion Rate",
       meaning:
-        "The percentage of users or visitors who complete a desired action, such as making a purchase."
+        "The percentage of users who complete a desired action."
     },
     {
       term: "Market Share",
       fullForm: "Market Share",
       meaning:
-        "The percentage of total sales in a market that belongs to a particular company."
+        "The percentage of total sales in a market captured by a particular company."
     },
     {
       term: "Target Market",
       fullForm: "Target Customer Market",
       meaning:
-        "The specific group of customers a business aims to serve with its product or service."
+        "The specific group of customers a business wants to serve."
     },
     {
       term: "Scalability",
       fullForm: "Business Scalability",
       meaning:
-        "The ability of a business to grow without a similar increase in costs."
+        "The ability of a business to grow without a proportional increase in costs."
     },
     {
       term: "Growth Hacking",
       fullForm: "Rapid Growth Strategy",
       meaning:
-        "Creative and data-driven techniques used to grow a startup quickly."
+        "Creative and data-driven techniques used to achieve rapid business growth."
     },
     {
       term: "Freemium",
@@ -219,67 +221,67 @@ function Dictionary() {
       term: "Subscription",
       fullForm: "Recurring Payment Model",
       meaning:
-        "A business model where customers pay regularly, such as monthly or yearly, to use a product or service."
+        "A business model where customers make recurring payments to continue using a product or service."
     },
     {
       term: "Marketplace",
       fullForm: "Online Marketplace",
       meaning:
-        "A platform that connects buyers and sellers to facilitate transactions."
+        "A platform that connects buyers and sellers in one place."
     },
     {
       term: "Competitor",
       fullForm: "Business Competitor",
       meaning:
-        "A company that offers similar products or services and competes for the same customers."
+        "A company that offers similar products or services to the same target customers."
     },
     {
       term: "Niche",
       fullForm: "Niche Market",
       meaning:
-        "A small, specific segment of a larger market with particular customer needs."
+        "A small and specific segment of a larger market."
     },
     {
       term: "Product Roadmap",
       fullForm: "Product Development Roadmap",
       meaning:
-        "A plan showing the future development goals, features and direction of a product."
+        "A plan that shows the future direction and development of a product."
     },
     {
       term: "Customer Persona",
       fullForm: "Ideal Customer Profile",
       meaning:
-        "A fictional representation of the ideal customer based on research and real customer data."
+        "A fictional representation of the ideal customer based on research and data."
     },
     {
       term: "Iteration",
       fullForm: "Product Iteration",
       meaning:
-        "The process of repeatedly improving a product based on feedback and testing."
+        "The process of improving a product through repeated changes and feedback."
     },
     {
       term: "Prototype",
       fullForm: "Product Prototype",
       meaning:
-        "An early version or model of a product created to test ideas and functionality."
+        "An early version of a product created to test an idea or concept."
     },
     {
       term: "Pitch",
       fullForm: "Startup Pitch",
       meaning:
-        "A short presentation used by founders to explain their startup idea, product, market and business potential."
+        "A short presentation used to explain a startup idea, product or business opportunity."
     },
     {
       term: "Pitch Deck",
       fullForm: "Investor Presentation",
       meaning:
-        "A presentation containing key information about a startup, usually prepared for investors."
+        "A presentation containing important information about a startup for investors."
     },
     {
       term: "Term Sheet",
       fullForm: "Investment Term Sheet",
       meaning:
-        "A document outlining the main terms and conditions of a proposed investment."
+        "A document that outlines the main terms and conditions of a potential investment."
     },
     {
       term: "IPO",
@@ -297,42 +299,72 @@ function Dictionary() {
   );
 
   return (
-    <div className="dictionary-page">
+    <>
+      <Navbar />
 
-      <h1>Startup Dictionary</h1>
+      <main>
+        <div className="dictionary-page">
 
-      <p>
-        Learn important startup and business terms in simple language.
-      </p>
+          {/* HERO */}
+          <section className="hero">
+            <div className="container">
 
-      <input
-        type="text"
-        placeholder="Search a term..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+              <p className="eyebrow">STARTUP DICTIONARY</p>
 
-      <div className="dictionary-grid">
+              <h1>
+                Startup <em>Dictionary</em>
+              </h1>
 
-        {filteredTerms.length > 0 ? (
-          filteredTerms.map((item, index) => (
-            <div className="dictionary-card" key={index}>
-
-              <h2>{item.term}</h2>
-
-              <h3>{item.fullForm}</h3>
-
-              <p>{item.meaning}</p>
+              <p className="lead">
+                Learn important startup and business terms in simple language.
+              </p>
 
             </div>
-          ))
-        ) : (
-          <p>No term found.</p>
-        )}
+          </section>
 
-      </div>
+          {/* DICTIONARY CONTENT */}
+          <section>
+            <div className="container">
 
-    </div>
+              {/* SEARCH */}
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Search a term..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+
+              {/* CARDS */}
+              <div className="dictionary-grid">
+
+                {filteredTerms.length > 0 ? (
+                  filteredTerms.map((item, index) => (
+                    <div
+                      className="dictionary-card"
+                      key={`${item.term}-${index}`}
+                    >
+                      <h2>{item.term}</h2>
+
+                      <h3>{item.fullForm}</h3>
+
+                      <p>{item.meaning}</p>
+                    </div>
+                  ))
+                ) : (
+                  <p>No term found.</p>
+                )}
+
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <Footer />
+    </>
   );
 }
 
