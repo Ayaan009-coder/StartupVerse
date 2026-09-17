@@ -462,8 +462,8 @@ function Home() {
               Dictionary
             </Link>
 
-            <Link to="/success-stories">
-              Success Stories
+            <Link to="/fundamentals">
+              Market Fundamentals
             </Link>
 
           </div>

@@ -2,27 +2,49 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="nav-container">
+    <header className="site-header">
+      <div className="nav-wrap">
 
-        <Link to="/" className="logo">
-          Startup<span>Verse</span>
+        <Link to="/" className="brand">
+          <svg
+            className="orbit-mark"
+            viewBox="0 0 34 34"
+            aria-hidden="true"
+          >
+            <circle className="ring" cx="17" cy="17" r="15" />
+            <circle className="ring" cx="17" cy="17" r="9" />
+            <circle className="core" cx="17" cy="17" r="4" />
+          </svg>
+
+          <span>StartupVerse</span>
         </Link>
 
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/roadmap">Roadmap</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/dictionary">Dictionary</Link>
-          <Link to="/fundamentals">Fundamentals</Link>
-        </div>
+        <nav className="main-nav">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
 
-        <Link to="/roadmap" className="nav-button">
-          Start Learning
-        </Link>
+            <li>
+              <Link to="/roadmap">Roadmap</Link>
+            </li>
+
+            <li>
+              <Link to="/skills">Skills</Link>
+            </li>
+
+            <li>
+              <Link to="/fundamentals">Market Fundamentals</Link>
+            </li>
+
+            <li>
+              <Link to="/dictionary">Dictionary</Link>
+            </li>
+          </ul>
+        </nav>
 
       </div>
-    </nav>
+    </header>
   );
 }
 

@@ -5,12 +5,10 @@ import Roadmap from "./pages/Roadmap";
 import Skills from "./pages/Skills";
 import Fundamentals from "./pages/Fundamentals";
 import Dictionary from "./pages/Dictionary";
-import SuccessStories from "./pages/SuccessStories";
 
 function App() {
   return (
     <BrowserRouter>
-
       <Routes>
 
         <Route path="/" element={<Home />} />
@@ -23,13 +21,7 @@ function App() {
 
         <Route path="/dictionary" element={<Dictionary />} />
 
-        <Route
-          path="/success-stories"
-          element={<SuccessStories />}
-        />
-
       </Routes>
-
     </BrowserRouter>
   );
 }
