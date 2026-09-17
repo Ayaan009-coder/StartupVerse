@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Roadmap from "./pages/Roadmap";
 import Skills from "./pages/Skills";
 import Dictionary from "./pages/Dictionary";
-import Startups from "./pages/Startups";
+import Fundamentals from "./pages/Fundamentals";
 import Podcasts from "./pages/Podcasts";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/dictionary" element={<Dictionary />} />
-          <Route path="/startups" element={<Startups />} />
+          <Route path="/fundamentals" element={<Fundamentals />} />
           <Route path="/podcasts" element={<Podcasts />} />
         </Routes>
       </main>
