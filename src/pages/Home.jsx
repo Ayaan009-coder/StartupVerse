@@ -110,9 +110,7 @@ function Home() {
 
         </div>
 
-        <Link to="/startups" className="outline-button">
-          Explore Startup Stories
-        </Link>
+   
 
       </section>
 

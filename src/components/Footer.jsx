@@ -14,7 +14,7 @@ function Footer() {
           <a href="/roadmap">Roadmap</a>
           <a href="/skills">Skills</a>
           <a href="/dictionary">Dictionary</a>
-          <a href="/startups">Startups</a>
+          <a href="/fundamentals">Fundamentals</a>
         </div>
 
       </div>

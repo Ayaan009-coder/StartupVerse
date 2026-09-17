@@ -14,8 +14,7 @@ function Navbar() {
           <Link to="/roadmap">Roadmap</Link>
           <Link to="/skills">Skills</Link>
           <Link to="/dictionary">Dictionary</Link>
-          <Link to="/startups">Startups</Link>
-          <Link to="/podcasts">Podcasts</Link>
+          <Link to="/fundamentals">Fundamentals</Link>
         </div>
 
         <Link to="/roadmap" className="nav-button">
