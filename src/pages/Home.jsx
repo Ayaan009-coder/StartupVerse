@@ -48,9 +48,6 @@ function Home() {
                 <Link to="/dictionary">Dictionary</Link>
               </li>
 
-              <li>
-                <Link to="/success-stories">Success Stories</Link>
-              </li>
             </ul>
           </nav>
 
