@@ -1,6 +1,6 @@
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./css.css";
 
 const skills = [
   {
@@ -83,3 +83,4 @@ function Skills() {
 }
 
 export default Skills;
+
