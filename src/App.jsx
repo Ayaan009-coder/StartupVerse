@@ -6,23 +6,26 @@ import Skills from "./pages/Skills";
 import Fundamentals from "./pages/Fundamentals";
 import Dictionary from "./pages/Dictionary";
 
+import { CartProvider } from "./context/CartContext";
+import Cart from "./context/Cart";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/roadmap" element={<Roadmap />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/fundamentals" element={<Fundamentals />} />
+          <Route path="/dictionary" element={<Dictionary />} />
 
-        <Route path="/" element={<Home />} />
-
-        <Route path="/roadmap" element={<Roadmap />} />
-
-        <Route path="/skills" element={<Skills />} />
-
-        <Route path="/fundamentals" element={<Fundamentals />} />
-
-        <Route path="/dictionary" element={<Dictionary />} />
-
-      </Routes>
-    </BrowserRouter>
+          {/* New shopping cart routes */}
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

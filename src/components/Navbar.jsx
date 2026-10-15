@@ -40,6 +40,15 @@ function Navbar() {
             <li>
               <Link to="/dictionary">Dictionary</Link>
             </li>
+            <li>
+  <Link to="/resources">Learning Store</Link>
+</li>
+
+<li>
+  <Link to="/cart">
+    Cart 🛒
+  </Link>
+</li>
           </ul>
         </nav>
 
