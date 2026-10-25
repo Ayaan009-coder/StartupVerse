@@ -54,17 +54,7 @@ function Navbar() {
               </NavLink>
             </li>
 
-            {/* ☀️ / 🌙 THEME TOGGLE BUTTON */}
-            <li>
-              <button
-                type="button"
-                onClick={toggleTheme}
-                className="theme-toggle-btn"
-                title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-              >
-                {theme === "dark" ? "☀️" : "🌙"}
-              </button>
-            </li>
+           
             <li>
               <Link to="/resources">Resources</Link>
             </li>
@@ -76,6 +66,18 @@ function Navbar() {
     Cart 🛒
   </Link>
 </li>
+
+ {/* ☀️ / 🌙 THEME TOGGLE BUTTON */}
+            <li>
+              <button
+                type="button"
+                onClick={toggleTheme}
+                className="theme-toggle-btn"
+                title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              >
+                {theme === "dark" ? "☀️" : "🌙"}
+              </button>
+            </li>
           </ul>
         </nav>
 
