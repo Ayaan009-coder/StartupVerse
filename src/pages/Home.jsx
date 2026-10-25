@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-
-function Home() {
+function Home() {const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       {/* ================= NAVBAR ================= */}
@@ -19,14 +19,16 @@ function Home() {
           </Link>
 
           <button
-            className="nav-toggle"
-            type="button"
-            aria-label="Menu kholo"
-          >
-            ☰
-          </button>
+  className="nav-toggle"
+  type="button"
+  aria-label="Toggle navigation menu"
+  aria-expanded={menuOpen}
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  ☰
+</button>
 
-          <nav className="main-nav">
+          <nav className={`main-nav ${menuOpen ? "open" : ""}`}>
             <ul>
               <li>
                 <Link to="/">Home</Link>

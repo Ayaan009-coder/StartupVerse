@@ -1,0 +1,275 @@
+/* ================= RESOURCES PAGE ================= */
+
+.resources-page {
+min-height: 100vh;
+padding: 70px 24px 100px;
+color: #F5F3EA;
+background:
+radial-gradient(ellipse at 85% 0%, rgba(73, 80, 140, 0.16), transparent 35%),
+#0A0D1E;
+}
+
+/* HEADER */
+
+.resources-header {
+max-width: 1120px;
+margin: 0 auto 55px;
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 30px;
+}
+
+.resources-eyebrow {
+margin-bottom: 18px;
+color: #FFB238;
+font-family: "IBM Plex Mono", monospace;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.resources-header h1 {
+max-width: 750px;
+margin: 0 0 18px;
+color: #F5F3EA;
+font-size: clamp(36px, 5vw, 62px);
+font-weight: 700;
+line-height: 1.1;
+letter-spacing: -2px;
+}
+
+.resources-header h1 span {
+color: #FFB238;
+}
+
+.resources-header > div > p:last-child {
+max-width: 540px;
+color: #B9BEDD;
+font-size: 16px;
+line-height: 1.8;
+}
+
+/* CART LINK */
+
+.resources-cart-link {
+display: inline-flex;
+flex-shrink: 0;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 12px 19px;
+border: 1px solid #41466F;
+border-radius: 10px;
+background: #171C3D;
+color: #F5F3EA;
+font-size: 14px;
+font-weight: 600;
+text-decoration: none;
+transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.resources-cart-link:hover {
+border-color: #FFB238;
+transform: translateY(-2px);
+}
+
+/* RESOURCES*
+
+/* ================= RESOURCES PAGE IMPROVEMENTS ================= */
+
+.resources-intro {
+max-width: 1120px;
+margin: 0 auto 28px;
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+gap: 30px;
+}
+
+.resources-section-label {
+margin-bottom: 10px;
+color: #59E3A6;
+font-family: "IBM Plex Mono", monospace;
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.5px;
+}
+
+.resources-intro h2 {
+color: #F5F3EA;
+font-size: clamp(24px, 3vw, 34px);
+line-height: 1.3;
+}
+
+.resources-intro h2 span {
+color: #FFB238;
+}
+
+.resources-intro > p {
+max-width: 390px;
+color: #B9BEDD;
+font-size: 14px;
+line-height: 1.8;
+}
+
+.resource-card-top {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 12px;
+margin-bottom: 24px;
+}
+
+.resource-card-top .resource-icon {
+margin-bottom: 0;
+}
+
+.resource-category {
+padding: 7px 10px;
+border: 1px solid #2B2F57;
+border-radius: 6px;
+color: #B9BEDD;
+font-family: "IBM Plex Mono", monospace;
+font-size: 9px;
+letter-spacing: 0.6px;
+}
+
+.resource-benefits {
+margin: 0 0 28px;
+}
+
+.resource-benefits h3 {
+margin-bottom: 13px;
+color: #F5F3EA;
+font-size: 14px;
+font-weight: 600;
+}
+
+.resource-benefits ul {
+display: grid;
+gap: 10px;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.resource-benefits li {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+color: #B9BEDD;
+font-size: 13px;
+line-height: 1.6;
+}
+
+.resource-benefits li span {
+flex-shrink: 0;
+color: #59E3A6;
+font-weight: 700;
+}
+
+.resource-price {
+display: flex;
+flex-direction: column;
+gap: 3px;
+}
+
+.resource-price > span {
+color: #B9BEDD;
+font-size: 11px;
+}
+
+.resource-price strong {
+color: #FFB238;
+font-size: 25px;
+}
+
+.resource-card-footer {
+align-items: center;
+}
+
+.resource-add-button {
+min-width: 130px;
+padding: 12px 15px;
+border: 1px solid #FFB238;
+border-radius: 9px;
+background: #FFB238;
+color: #0A0D1E;
+font-family: inherit;
+font-size: 12px;
+font-weight: 700;
+cursor: pointer;
+transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.resource-add-button:hover {
+transform: translateY(-2px);
+background: #FFC45F;
+}
+
+.resource-add-button.is-added {
+border-color: #59E3A6;
+background: #59E3A6;
+color: #0A0D1E;
+}
+
+.resource-add-button:focus-visible {
+outline: 2px solid #F5F3EA;
+outline-offset: 4px;
+}
+
+.resources-note {
+max-width: 1120px;
+margin: 50px auto 0;
+padding: 24px;
+display: flex;
+align-items: flex-start;
+gap: 16px;
+border: 1px solid #2B2F57;
+border-radius: 14px;
+background: #11152D;
+}
+
+.resources-note > span {
+color: #FFB238;
+font-size: 24px;
+}
+
+.resources-note h3 {
+margin-bottom: 8px;
+color: #F5F3EA;
+font-size: 17px;
+}
+
+.resources-note p {
+color: #B9BEDD;
+font-size: 13px;
+line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+.resources-intro {
+align-items: flex-start;
+flex-direction: column;
+gap: 12px;
+}
+
+.resources-intro > p {
+max-width: 100%;
+}
+
+.resource-card-footer {
+flex-wrap: wrap;
+}
+
+.resource-add-button {
+flex: 1;
+}
+
+.resources-note {
+margin-top: 35px;
+padding: 19px;
+}
+}

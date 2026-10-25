@@ -7,6 +7,7 @@ import Fundamentals from "./pages/Fundamentals";
 import Dictionary from "./pages/Dictionary";
 
 import { CartProvider } from "./context/CartContext";
+import Resources from "./pages/Resources";
 import Cart from "./context/Cart";
 
 function App() {
@@ -19,8 +20,6 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/fundamentals" element={<Fundamentals />} />
           <Route path="/dictionary" element={<Dictionary />} />
-
-          {/* New shopping cart routes */}
           <Route path="/resources" element={<Resources />} />
           <Route path="/cart" element={<Cart />} />
         </Routes>

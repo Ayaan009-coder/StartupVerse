@@ -1,0 +1,263 @@
+
+.cart-page {
+  min-height: 100vh;
+  padding: 55px 7%;
+  background: #0A0D1E;
+  color: #F5F3EA;
+  font-family: "Inter", sans-serif;
+}
+
+.cart-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.cart-back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #A6AAC7;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cart-back-link:hover {
+  color: #FFB238;
+}
+
+.cart-eyebrow,
+.cart-summary-label,
+.cart-item-label {
+  color: #59E3A6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.cart-title {
+  margin: 12px 0;
+  font-size: clamp(36px, 5vw, 58px);
+  letter-spacing: -2px;
+}
+
+.cart-title span {
+  color: #FFB238;
+}
+
+.cart-subtitle {
+  margin-bottom: 40px;
+  color: #A6AAC7;
+  line-height: 1.7;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 25px;
+  align-items: start;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 25px;
+  background: #171C3D;
+  border: 1px solid #2B2F57;
+  border-radius: 16px;
+}
+
+.cart-item-label {
+  margin: 0 0 10px;
+  font-size: 10px;
+}
+
+.cart-item-info h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.cart-item-price,
+.cart-demo-note {
+  color: #A6AAC7;
+  font-size: 13px;
+}
+
+.cart-remove-btn {
+  margin-top: 12px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #A6AAC7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.cart-remove-btn:hover {
+  color: #FFB238;
+}
+
+.cart-item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  border: 1px solid #2B2F57;
+  border-radius: 9px;
+}
+
+.cart-quantity button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 6px;
+  background: #10142F;
+  color: #F5F3EA;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.cart-quantity button:hover {
+  color: #FFB238;
+}
+
+.cart-price {
+  color: #FFB238;
+  font-size: 17px;
+}
+
+.cart-summary {
+  padding: 27px;
+  background: #10142F;
+  border: 1px solid #2B2F57;
+  border-radius: 16px;
+}
+
+.cart-summary-label {
+  margin: 0 0 15px;
+}
+
+.cart-summary h2 {
+  margin: 0 0 25px;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.cart-summary-row,
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0;
+  color: #A6AAC7;
+  font-size: 14px;
+}
+
+.cart-total {
+  padding-top: 20px;
+  border-top: 1px solid #2B2F57;
+  color: #F5F3EA;
+  font-size: 17px;
+}
+
+.cart-total strong {
+  color: #FFB238;
+}
+
+.cart-btn,
+.cart-continue-btn {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: #FFB238;
+  color: #0A0D1E;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.cart-btn:hover,
+.cart-continue-btn:hover {
+  background: #ffc45f;
+  transform: translateY(-2px);
+}
+
+.cart-demo-note {
+  margin: 15px 0 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cart-empty {
+  padding: 65px 25px;
+  text-align: center;
+  background: #10142F;
+  border: 1px solid #2B2F57;
+  border-radius: 18px;
+}
+
+.cart-empty-icon {
+  margin-bottom: 20px;
+  font-size: 42px;
+}
+
+.cart-empty h2 {
+  font-size: 25px;
+}
+
+.cart-empty p {
+  max-width: 470px;
+  margin: 15px auto 25px;
+  color: #A6AAC7;
+  line-height: 1.8;
+}
+
+.cart-continue-btn {
+  width: auto;
+  padding: 14px 22px;
+}
+
+@media (max-width: 850px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .cart-page {
+    padding: 30px 5%;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cart-item-actions {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .cart-title {
+    letter-spacing: -1px;
+  }
+}
+

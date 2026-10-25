@@ -41,8 +41,10 @@ function Navbar() {
               <Link to="/dictionary">Dictionary</Link>
             </li>
             <li>
-  <Link to="/resources">Learning Store</Link>
-</li>
+              <Link to="/resources">Resources</Link>
+            </li>
+
+            
 
 <li>
   <Link to="/cart">
