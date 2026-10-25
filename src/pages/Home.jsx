@@ -1,70 +1,18 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
-function Home() {const [menuOpen, setMenuOpen] = useState(false);
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+function Home() {
   return (
     <>
-      {/* ================= NAVBAR ================= */}
-      <header className="site-header">
-        <div className="nav-wrap">
+      <Navbar />
 
-          <Link to="/" className="brand">
-            <svg className="orbit-mark" viewBox="0 0 34 34" aria-hidden="true">
-              <circle className="ring" cx="17" cy="17" r="15" />
-              <circle className="ring" cx="17" cy="17" r="9" />
-              <circle className="core" cx="17" cy="17" r="3" />
-              <circle className="dot" cx="17" cy="2" r="2" />
-            </svg>
-
-            Startup<span className="verse">Verse</span>
-          </Link>
-
-          <button
-  className="nav-toggle"
-  type="button"
-  aria-label="Toggle navigation menu"
-  aria-expanded={menuOpen}
-  onClick={() => setMenuOpen(!menuOpen)}
->
-  ☰
-</button>
-
-          <nav className={`main-nav ${menuOpen ? "open" : ""}`}>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-
-              <li>
-                <Link to="/roadmap">Roadmap</Link>
-              </li>
-
-              <li>
-                <Link to="/skills">Skills</Link>
-              </li>
-
-              <li>
-                <Link to="/fundamentals">Market Fundamentals</Link>
-              </li>
-
-              <li>
-                <Link to="/dictionary">Dictionary</Link>
-              </li>
-
-            </ul>
-          </nav>
-
-        </div>
-      </header>
-
-
-      {/* ================= HERO ================= */}
       <main>
-
+        {/* HERO */}
         <section className="hero">
           <div className="container hero-grid">
-
             <div>
-
               <span className="eyebrow">
                 India ka startup ecosystem, ek jagah
               </span>
@@ -81,13 +29,11 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                 StartupVerse mein milega roadmap,
                 zaroori skills, market ke fundamentals,
                 saari startup terms ki simple explanation,
-                real success stories —
-                sab ek jagah, Hinglish mein.
+                real success stories — sab ek jagah,
+                Hinglish mein.
               </p>
 
-
               <div className="cta-row">
-
                 <Link to="/roadmap" className="btn btn-primary">
                   Roadmap →
                 </Link>
@@ -95,13 +41,9 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                 <Link to="/dictionary" className="btn btn-ghost">
                   Dictionary
                 </Link>
-
               </div>
 
-
-              {/* FOUNDER TIP */}
               <div className="callout" style={{ marginTop: "40px" }}>
-
                 <strong>Aaj ka founder tip:</strong>
 
                 <p style={{ margin: "8px 0 0" }}>
@@ -109,18 +51,12 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                   real customer problem and launching a simple version
                   of your product to get feedback fast.
                 </p>
-
               </div>
-
             </div>
 
-
-            {/* ================= ORBIT ================= */}
+            {/* ORBIT */}
             <div className="hero-orbit" aria-hidden="true">
-
               <svg viewBox="0 0 520 520">
-
-                {/* Outer ring */}
                 <g className="orbit-anim-ring slow">
                   <circle
                     cx="260"
@@ -132,8 +68,6 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                   />
                 </g>
 
-
-                {/* Middle ring */}
                 <g className="orbit-anim-ring">
                   <circle
                     cx="260"
@@ -145,8 +79,6 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                   />
                 </g>
 
-
-                {/* Inner ring */}
                 <g className="orbit-anim-ring fast">
                   <circle
                     cx="260"
@@ -158,14 +90,7 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                   />
                 </g>
 
-
-                {/* Center IDEA */}
-                <circle
-                  cx="260"
-                  cy="260"
-                  r="30"
-                  fill="#FFB238"
-                />
+                <circle cx="260" cy="260" r="30" fill="#FFB238" />
 
                 <text
                   x="260"
@@ -179,300 +104,148 @@ function Home() {const [menuOpen, setMenuOpen] = useState(false);
                   IDEA
                 </text>
 
-
-                {/* Green dot */}
                 <g className="orbit-anim-ring fast">
-                  <circle
-                    cx="260"
-                    cy="160"
-                    r="7"
-                    fill="#59E3A6"
-                  />
+                  <circle cx="260" cy="160" r="7" fill="#59E3A6" />
                 </g>
 
-
-                {/* Yellow dot */}
                 <g className="orbit-anim-ring">
-                  <circle
-                    cx="420"
-                    cy="260"
-                    r="7"
-                    fill="#FFB238"
-                  />
+                  <circle cx="420" cy="260" r="7" fill="#FFB238" />
                 </g>
 
-
-                {/* Yellow dot */}
                 <g className="orbit-anim-ring">
-                  <circle
-                    cx="100"
-                    cy="260"
-                    r="7"
-                    fill="#FFB238"
-                  />
+                  <circle cx="100" cy="260" r="7" fill="#FFB238" />
                 </g>
 
-
-                {/* Green dot */}
                 <g className="orbit-anim-ring slow">
-                  <circle
-                    cx="260"
-                    cy="40"
-                    r="7"
-                    fill="#59E3A6"
-                  />
+                  <circle cx="260" cy="40" r="7" fill="#59E3A6" />
                 </g>
 
-
-                {/* White dot */}
                 <g className="orbit-anim-ring slow">
-                  <circle
-                    cx="480"
-                    cy="260"
-                    r="6"
-                    fill="#F5F3EA"
-                  />
+                  <circle cx="480" cy="260" r="6" fill="#F5F3EA" />
                 </g>
-
               </svg>
-
             </div>
-
           </div>
         </section>
 
-
-        {/* ================= EXPLORE ================= */}
+        {/* EXPLORE */}
         <div className="container">
-
           <div className="section-head">
-
             <h2>Ek sawaal, ek jagah jawaab</h2>
 
             <p>
-              Jo bhi confusion ho —
-              "kya skills chahiye",
-              "B2B aur D2C mein farq kya hai",
-              "Ek Startup UNICORN kaise banta hai" —
-              yahan alag-alag section mein
-              sab kuch milega.
+              Jo bhi confusion ho — kya skills chahiye,
+              B2B aur D2C mein farq kya hai, ya ek startup
+              unicorn kaise banta hai — yahan sab kuch milega.
             </p>
-
           </div>
-
 
           <div className="grid grid-3">
-
-            {/* ROADMAP */}
             <Link to="/roadmap" className="card-link">
               <div className="card">
-
-                <span className="tag">
-                  Step-by-step
-                </span>
-
-                <h3>
-                  Startup Roadmap
-                </h3>
-
+                <span className="tag">Step-by-step</span>
+                <h3>Startup Roadmap</h3>
                 <p>
-                  Idea se lekar launch tak —
-                  pura process, stage by stage, samjho.
+                  Idea se lekar launch tak — pura process,
+                  stage by stage, samjho.
                 </p>
-
               </div>
             </Link>
 
-
-            {/* SKILLS */}
             <Link to="/skills" className="card-link">
               <div className="card">
-
-                <span className="tag">
-                  Self check
-                </span>
-
-                <h3>
-                  Zaroori Skills
-                </h3>
-
+                <span className="tag">Self check</span>
+                <h3>Zaroori Skills</h3>
                 <p>
-                  Founder banne ke liye kaunsi skills
-                  kaam aati hain, aur kaise seekhein.
+                  Founder banne ke liye kaunsi skills kaam
+                  aati hain, aur kaise seekhein.
                 </p>
-
               </div>
             </Link>
 
-
-            {/* FUNDAMENTALS */}
             <Link to="/fundamentals" className="card-link">
               <div className="card">
-
-                <span className="tag">
-                  Basics
-                </span>
-
-                <h3>
-                  Market Fundamentals
-                </h3>
-
+                <span className="tag">Basics</span>
+                <h3>Market Fundamentals</h3>
                 <p>
-                  TAM-SAM-SOM, unit economics,
-                  product-market fit —
-                  clearly samjhaya gaya.
+                  TAM-SAM-SOM, unit economics aur
+                  product-market fit ko clearly samjho.
                 </p>
-
               </div>
             </Link>
 
-
-            {/* DICTIONARY */}
             <Link to="/dictionary" className="card-link">
               <div className="card">
-
-                <span className="tag">
-                  Dictionary
-                </span>
-
-                <h3>
-                  Startup Dictionary
-                </h3>
-
+                <span className="tag">Dictionary</span>
+                <h3>Startup Dictionary</h3>
                 <p>
-                  B2B, D2C, SaaS, cap table,
-                  burn rate — har term simple
-                  language mein.
+                  B2B, D2C, SaaS, cap table aur burn rate —
+                  har term simple language mein.
                 </p>
-
               </div>
             </Link>
 
-
-            {/* SUCCESS STORIES */}
-            <Link to="/success-stories" className="card-link">
+            <Link to="/resources" className="card-link">
               <div className="card">
-
-                <span className="tag">
-                  Case studies
-                </span>
-
-                <h3>
-                  Success Stories
-                </h3>
-
+                <span className="tag">Learning hub</span>
+                <h3>Resources</h3>
                 <p>
-                  Zomato, Swiggy, Zepto jaise
-                  startups ki journey aur
-                  unse seekh.
+                  Startup journey mein kaam aane wale
+                  useful learning resources ek jagah.
                 </p>
-
               </div>
             </Link>
 
+            <Link to="/cart" className="card-link">
+              <div className="card">
+                <span className="tag">Your items</span>
+                <h3>Shopping Cart 🛒</h3>
+                <p>
+                  Apne selected items dekho aur cart ko
+                  manage karo.
+                </p>
+              </div>
+            </Link>
           </div>
 
-
-          {/* ================= WHY STARTUPVERSE ================= */}
+          {/* WHY STARTUPVERSE */}
           <div className="orbit-divider">
             Kyun StartupVerse
           </div>
 
-
-          <div
-            className="grid grid-3"
-            style={{ marginBottom: "40px" }}
-          >
-
+          <div className="grid grid-3" style={{ marginBottom: "40px" }}>
             <div className="card">
-
-              <h3>
-                Sab kuch Hinglish mein
-              </h3>
-
+              <h3>Sab kuch Hinglish mein</h3>
               <p>
-                Complicated business jargon nahi —
-                jaisi bhasha tum sochte ho,
-                waisi hi yahan likha hai.
+                Complicated business jargon nahi — jaisi
+                bhasha tum sochte ho, waisi hi yahan likha hai.
               </p>
-
             </div>
 
-
             <div className="card">
-
-              <h3>
-                Real examples
-              </h3>
-
+              <h3>Real examples</h3>
               <p>
-                Sirf theory nahi — Indian startups
-                ke real founders, unki decisions
-                aur unke experiences se seekh.
+                Indian startups ke real founders, unki
+                decisions aur experiences se seekho.
               </p>
-
             </div>
 
-
             <div className="card">
-
-              <h3>
-                Beginner-friendly
-              </h3>
-
+              <h3>Beginner-friendly</h3>
               <p>
-                Agar tumne kabhi startup ke baare
-                mein socha bhi nahi, phir bhi
-                yahan se shuru kar sakte ho.
+                Agar tumne kabhi startup ke baare mein
+                socha bhi nahi, phir bhi yahan se shuru
+                kar sakte ho.
               </p>
-
             </div>
-
           </div>
-
         </div>
-
       </main>
 
-
-      {/* ================= FOOTER ================= */}
-      <footer className="site-footer">
-
-        <div className="container footer-grid">
-
-          <p className="footer-note">
-            StartupVerse ek learning resource hai —
-            investment ya legal advice nahi.
-            Koi bhi startup shuru karne se pehle
-            apni research aur zaroorat ke hisaab se
-            professional advice zaroor lo.
-          </p>
-
-
-          <div className="footer-links">
-
-            <Link to="/">Home</Link>
-
-            <Link to="/roadmap">
-              Roadmap
-            </Link>
-
-            <Link to="/dictionary">
-              Dictionary
-            </Link>
-
-            <Link to="/fundamentals">
-              Market Fundamentals
-            </Link>
-
-          </div>
-
-        </div>
-
-      </footer>
-
+      <Footer />
     </>
   );
 }
 
 export default Home;
+

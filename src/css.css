@@ -754,3 +754,128 @@ footer.site-footer {
     }
 
 }
+
+/* =====================================================
+   GLOBAL LIGHT THEME FOR ALL PAGES 
+   (Home, Roadmap, Skills, Fundamentals, Dictionary)
+   ===================================================== */
+
+/* 1. Full Body & Background on ALL Pages */
+html[data-theme="light"],
+html[data-theme="light"] body {
+  background-color: #f8fafc !important;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 50% -10%, rgba(217, 119, 6, 0.08), transparent 70%),
+    radial-gradient(circle 500px at 90% 25%, rgba(5, 150, 105, 0.05), transparent 60%) !important;
+  color: #0f172a !important;
+}
+
+/* 2. All Headings & Paragraphs on ALL Pages */
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] p {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .lead {
+  color: #475569 !important;
+}
+
+/* 3. Common Cards on ALL Pages (Home, Skills, Roadmap, Fundamentals) */
+html[data-theme="light"] .card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+
+html[data-theme="light"] .card:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08) !important;
+}
+
+html[data-theme="light"] .card h3 {
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .card p {
+  color: #475569 !important;
+}
+
+/* 4. Tags & Badges on Cards */
+html[data-theme="light"] .card .tag {
+  background: rgba(5, 150, 105, 0.1) !important;
+  border-color: rgba(5, 150, 105, 0.3) !important;
+  color: #059669 !important;
+}
+
+/* 5. Buttons (Primary & Ghost) */
+html[data-theme="light"] .btn-ghost {
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html[data-theme="light"] .btn-ghost:hover {
+  border-color: #ffb238 !important;
+  color: #d97706 !important;
+  background: #fef3c7 !important;
+}
+
+html[data-theme="light"] .btn-primary {
+  background: #ffb238 !important;
+  color: #1a1002 !important;
+}
+
+/* 6. Skills Page (Meter & Skill Cards) */
+html[data-theme="light"] .skill-meter {
+  background: #e2e8f0 !important;
+}
+
+/* 7. Callout Boxes (Info/Notice Blocks) */
+html[data-theme="light"] .callout {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-left: 4px solid #ffb238 !important;
+  color: #334155 !important;
+}
+
+html[data-theme="light"] .callout strong {
+  color: #0f172a !important;
+}
+
+/* 8. Orbit Dividers & Lines */
+html[data-theme="light"] .orbit-divider {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="light"] .orbit-divider::before,
+html[data-theme="light"] .orbit-divider::after {
+  background: #e2e8f0 !important;
+}
+
+/* 9. Orbit SVG Marks */
+html[data-theme="light"] .orbit-mark circle.ring {
+  stroke: #cbd5e1 !important;
+}
+
+/* 10. Footer on ALL Pages */
+html[data-theme="light"] footer.site-footer {
+  border-top: 1px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+}
+
+html[data-theme="light"] .footer-note {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="light"] .footer-links a {
+  color: #475569 !important;
+}
+
+html[data-theme="light"] .footer-links a:hover {
+  color: #d97706 !important;
+}
