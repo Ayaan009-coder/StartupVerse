@@ -8,6 +8,7 @@ import Fundamentals from "./pages/Fundamentals";
 import Dictionary from "./pages/Dictionary";
 import Resources from "./pages/Resources";
 import Cart from "./context/Cart";
+import Contact from "./pages/Contact";
 
 import { DictionaryProvider } from "./context/DictionaryContext";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -27,6 +28,7 @@ function App() {
               <Route path="/dictionary" element={<Dictionary />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </BrowserRouter>
         </CartProvider>
