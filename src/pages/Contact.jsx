@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Input from "../components/Input";
+import Input from "../components/Input.jsx";
 import "./contact.css";
 
 function Contact() {
